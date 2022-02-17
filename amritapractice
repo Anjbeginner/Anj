@@ -62,6 +62,69 @@ a1 = funcshift_generator(key)
 print(a1)
 print(functionpwdencrypt(x, a1))
 
+'''In an election, there are 7candidates. The number of voters are unknown beforehand. Each voter is allowed one vote.
+While casting the vote, the voter is allowed to enter only the vote number. The vote number is 1 for candidate 1, 2 for candidate 2, 
+3 for candidate 3, and so on. Any vote which is not a number from 1 to 7 is an invalidvote.
+The voting process is terminated by a vote of 0 (zero). 
+Display the election results: count of votes for each candidate, count of invalid votes, and the candidate with highest votes.'''
+
+x = int(input('number of voters'))
+c1 = 0
+c2 = 0
+c3 = 0
+c4 = 0
+c5 = 0
+c6 = 0
+c7 = 0
+c8 = 0
+arr=[]
+for i in range(x):
+    y = int(input('enter vote number between 1 to 7'))
+    if y == 1:
+        c1 += 1
+
+    elif y == 2:
+        c2 += 1
+
+    elif y == 3:
+        c3 += 1
+
+    elif (y == 4):
+        c4 += 1
+
+    elif y == 5:
+        c5 += 1
+
+    elif (y == 6):
+        c6 += 1
+
+    elif (y == 7):
+        c7 += 1
+
+    elif(y ==0 or y>7):
+        c8+=1
+
+print('candidate1 no of votes:', c1)
+arr.append(c1)
+print('candidate2 no of votes:', c2)
+arr.append(c2)
+print('candidate3 no of votes:', c3)
+arr.append(c3)
+print('candidate4 no of votes:', c4)
+arr.append(c4)
+print('candidate5 no of votes:', c5)
+arr.append(c5)
+print('candidate6 no of votes:', c6)
+arr.append(c6)
+print('candidate7 no of votes:', c7)
+arr.append(c7)
+print('invalid votes:',c8)
+arr.append(c8)
+
+max_value=max(arr)
+max_index=arr.index(max_value)
+final=max_index+1
+print('candidate with max vote is candidate', final)
 
 
 
