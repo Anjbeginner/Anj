@@ -33,7 +33,37 @@ if(sum1==y and sum2==x):
     print('amicable')
 else:
     print('not amicable')
-
+    
+'''Write a program that asks the user for the high temperature for each day in the month of
+January. Ask the user to enter all of the temperatures in either Celsius or Fahrenheit
+(a) Store these temperatures in a list.
+(b) Pass the list to a function that calculates and returns the average high temperature for the
+month.
+(c) Pass the list to another function that finds and returns the highest temperature for the
+month.'''
+def avg_temp(arr):
+    sum1 = 0
+    n=len(arr)
+    for i in arr:
+        sum1 = sum1+i
+    avg=sum1/n
+    return avg
+def high_temp(arr):
+    max_value=max(arr)
+    return(max_value)
+x = int(input('enter number of days'))
+print('Do you want to enter temp values celsius or farenheit?')
+c=input()
+temp = []
+print('enter temp values in',c)
+for i in range(x):
+    temp.append(int(input()))
+print(temp)
+a1=avg_temp(temp)
+a2=high_temp(temp)
+print('average temp:',a1)
+print('highest temp:',a2)
+    
 
 """Write a  python program to encrypt a password.Step1: input the password from user
 Step2: Define a functionshift_generate()for generating ashiftvalue from the user entered secret keyky.
