@@ -1,4 +1,4 @@
-"""Determine the gross pay for each of several employees. The company pays “straight time”
+"""1.Determine the gross pay for each of several employees. The company pays “straight time”
 for the first 40 hours worked by each employee and pays  1.5 times of the amount
 for every hour worked in excess of 40 hours. Your program should input  the number of hours for each employee worked last week
 and the hourly rate of each employee and display the employee's gross salary"""
@@ -13,7 +13,7 @@ else:
 print('salary is',s)
 
 
-"""Write a python program to check whether given two numbers are Amicable numbers using Functions.
+"""2.Write a python program to check whether given two numbers are Amicable numbers using Functions.
 Amicable numbers are a pair of numbers with the following property: the sum of all of the
 proper divisors of the first number (not including itself) exactly equals the second number
 while the sum of all of the proper divisors of the second number (not including itself)
@@ -34,7 +34,7 @@ if(sum1==y and sum2==x):
 else:
     print('not amicable')
     
-'''Write a program that asks the user for the high temperature for each day in the month of
+'''3.Write a program that asks the user for the high temperature for each day in the month of
 January. Ask the user to enter all of the temperatures in either Celsius or Fahrenheit
 (a) Store these temperatures in a list.
 (b) Pass the list to a function that calculates and returns the average high temperature for the
@@ -65,7 +65,7 @@ print('average temp:',a1)
 print('highest temp:',a2)
     
 
-"""Write a  python program to encrypt a password.Step1: input the password from user
+"""4.Write a  python program to encrypt a password.Step1: input the password from user
 Step2: Define a functionshift_generate()for generating ashiftvalue from the user entered secret keyky.
 Step3: Define a functionpwdencrypt()for generating the encrypted password using shift value."""
 
@@ -92,7 +92,7 @@ a1 = funcshift_generator(key)
 print(a1)
 print(functionpwdencrypt(x, a1))
 
-'''In an election, there are 7candidates. The number of voters are unknown beforehand. Each voter is allowed one vote.
+'''5.In an election, there are 7candidates. The number of voters are unknown beforehand. Each voter is allowed one vote.
 While casting the vote, the voter is allowed to enter only the vote number. The vote number is 1 for candidate 1, 2 for candidate 2, 
 3 for candidate 3, and so on. Any vote which is not a number from 1 to 7 is an invalidvote.
 The voting process is terminated by a vote of 0 (zero). 
@@ -155,6 +155,63 @@ max_value=max(arr)
 max_index=arr.index(max_value)
 final=max_index+1
 print('candidate with max vote is candidate', final)
+
+
+'''6.Write a Python script to Implement the following Dice game.The rules of the game are :
+1. The player rolls two dice and adds up the face values at the top.
+2. If the sum is a 7 or 11 on the first throw, the player wins.
+3. If the sum is a 2, 3 or 12 on the first throw, the player looses.
+4. If the sum is any other number (4,5,6,8,9,10,12) on the first throw, that sum becomes the players point.
+To win, the player gets a second chance for rolling the dice.If he makes the same point in the second chance player wins the game otherwise player looses the game'''
+
+x=int(input('enter first dice value'))
+y=int(input('enter second dice value'))
+sum=0
+sum1=0
+sum2=0
+if x+y==7 or x+y==11:
+    sum=x+y
+    print('sum is:',sum)
+    print('player won the game')
+elif x+y==2 or x+y==3 or x+y==12:
+    sum=x+y
+    print('sum is:',sum)
+    print('player lost the game')
+elif x+y==4 or x+y==5 or x+y==6 or x+y==8 or x+y==9 or x+y==10:
+    sum1=x+y
+    print('player point is:',sum1)
+    print('payer gets another chance')
+    x1=int(input('enter dice 1 value again'))
+    y1=int(input('enter dice 2 value again'))
+    sum2=x1+y1
+    print('player point is:',sum2)
+    if sum1==sum2:
+        print('player has won')
+    else:
+        print('player has lost')
+
+
+"""7.Write a Python program to Create a "list" of integers.
+The size of the list should be a multiple of 3.
+Slice the list into 3 equal parts and reverse each slice and print the reversed list ."""
+x = int(input('enter a value'))
+a = []
+a1 = []
+if x % 3 == 0:
+    size = 3
+    for i in range(x):
+        a.append(int(input('enter values')))
+    print(a)
+else:
+    print('invalid')
+for x in range(0, len(a), size):
+    a1.append(a[x:x + size])
+print(a1)
+reverse_list = [x[::-1] for x in a1]
+print(reverse_list)
+
+
+
 
 
 
