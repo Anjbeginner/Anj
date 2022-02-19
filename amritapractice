@@ -211,6 +211,75 @@ reverse_list = [x[::-1] for x in a1]
 print(reverse_list)
 
 
+"""LIST Operations
+Read a List of n elements from the user and perform the following operations as a menu-driven program.
+You have 3 Options:
+Option 1: Print the maximum value in the list.
+Option 2: Print the sum of elements of the list.
+Option 3: Swap every ith element of the list with (i+2)th element."""
+
+x=int(input('enter number of elements in the list'))
+arr=[]
+arr1=[]
+for i in range(x):
+    arr.append(int(input('enter list value')))
+print(arr)
+y=int(input('enter option:'))
+if(y==1):
+    max_value=max(arr)
+    print('max value is:',max_value)
+if(y==2):
+    sum=0
+    for i in arr:
+        sum+=i
+    print('sum is:',sum)
+if(y==3):
+    arr1=arr[2:] + arr[:2]
+    print('shifted array is:',arr1)
+if(y>3):
+    print('invalid')
+    
+ '''Repeatedly read a list of values (of any data type) from the user until an 'X' is entered. 
+Store it as a list (DO NOT store X). Also read a user choice to print the following details:
+1. List of numbers without any duplicates ( Single line , space separated )
+2. The entire list ( Entire list should be in Single line , space seperated )
+3. print reverse of all strings starting with 'p' and length greater than 4 ( Single line , space seperated'''
+x = int(input('enter number of elements in the list'))
+arr = []
+arr1 = []
+num = ''
+chara = ''
+chara2 = ''
+string = ''
+for i in range(x):
+    arr.append(input('enter list value'))
+print(arr)
+y = int(input('enter option:'))
+if y == 1:
+    for i in range(len(arr)):
+        if arr[i].isdigit():
+            num = num + arr[i]
+    list1 = list(num)
+    arr1 = list(set(num))
+    print('List of numbers without any duplicates:', arr1)
+
+if y == 2:
+    for i in range(len(arr)):
+        chara = chara + arr[i]
+    list2 = list(chara)
+    print('The entire list is:', list2)
+
+if y == 3:
+    for i in range(len(arr)):
+        if arr[i].startswith('p'):
+            chara2 = chara2 + arr[i]
+    for i in chara2:
+        string = i + string
+    print('reverse of all strings starting with p')
+    print('p '.join(string.split('p'))[:-1])
+
+    if y > 3:
+        print('invalid')
 
 
 
